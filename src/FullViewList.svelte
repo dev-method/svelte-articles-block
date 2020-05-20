@@ -18,7 +18,7 @@
             {title}
         </div>
         <div class="fullview-content-body">
-            {@html body}
+            {@html body}...
         </div>
         <div class="fullview-readmore-wr">
             Читать далее

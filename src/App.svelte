@@ -97,7 +97,7 @@
 						<FullViewList
 								img_src={item_new.cover}
 								title={item_new.title}
-								body={item_new.body}
+								body={item_new.body.slice(0,300)}
 								pubdate={item_new.pubdate}
 								slug={item_new.slug}
 						/>
