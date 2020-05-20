@@ -133,9 +133,13 @@
 	</div>
 	<div class="materials-pagination-wr">
 		{#if chunk_array}
-			<div class="materials-pagination-item">
+			<div class="materials-pagination">
 				{#each chunk_array as item}
-					<div on:click={()=>active_page=Number(chunk_array.indexOf(item))+1}>{ Number(chunk_array.indexOf(item))+1}</div>
+					{#if Number(active_page)===Number(chunk_array.indexOf(item))+1}
+							<div class="materials-pagination-item mat-pagination-item-active" on:click={()=>active_page=Number(chunk_array.indexOf(item))+1}>{ Number(chunk_array.indexOf(item))+1}</div>
+					{:else}
+						    <div class="materials-pagination-item " on:click={()=>active_page=Number(chunk_array.indexOf(item))+1}>{ Number(chunk_array.indexOf(item))+1}</div>
+					{/if}
 				{/each}
 			</div>
 		{/if}
