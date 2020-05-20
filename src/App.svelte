@@ -55,21 +55,23 @@
 	<div class="materials-config-wr">
 		<div class="config-icons-container">
 			<div class="config-icon-wr" on:click={()=>view_id = 1}>
-				<img alt="" src="">
+				<img alt="" src={proj_settings.grid_icon_url}>
 			</div>
 			<div class="config-icon-wr" on:click={()=>view_id = 2}>
-				<img alt="" src="">
+				<img alt="" src={proj_settings.points_icon_url}>
 			</div>
 			<div class="config-icon-wr" on:click={()=>view_id = 3}>
-				<img alt="" src="">
+				<img alt="" src={proj_settings.lines_icon_url}>
 			</div>
 		</div>
 		<div class="config-search-container">
 			<div class="config-search-wr">
-				<div class="config-search-icon-wr">
-					<img alt="" src="">
+				<div class="search-input">
+					<div class="config-search-icon-wr">
+						<img alt="" src={proj_settings.search_icon_url}>
+					</div>
+					<input bind:value={searchQuery} type="search"/>
 				</div>
-				<input bind:value={searchQuery} type="search"/>
 			</div>
 		</div>
 	</div>
