@@ -3,7 +3,7 @@
 	import ThumbViewList from './ThumbViewList.svelte'
 	import TitleViewList from './TitleViewList.svelte'
 	import proj_settings from './env.js'
-	import { onMount } from "svelte";
+	import { onMount, afterUpdate } from "svelte";
 
 	let searchQuery = ''
 	let active_page = 1
@@ -43,7 +43,6 @@
 	function currentPageArray(arr_index, res_array) {
 		return res_array[arr_index-1]
 	}
-
 
 	$: search_arr = createSearchArray(searchQuery, news)
 	$: chunk_array = chunkArray(selected_value, search_arr)
@@ -97,7 +96,7 @@
 						<FullViewList
 								img_src={item_new.cover}
 								title={item_new.title}
-								body={item_new.body.slice(0,300)}
+								body={item_new.body.slice(0,300)+"..."}
 								pubdate={item_new.pubdate}
 								slug={item_new.slug}
 						/>
