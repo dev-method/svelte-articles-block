@@ -1,4 +1,5 @@
 <script>
+    import proj_settings from './env.js'
     export let img_src
     export let title
     export let slug
@@ -9,7 +10,7 @@
     </div>
     <div class="thumbview-title-wr">
         <div class="thumbview-title">
-            <a href="https://www.vekomet.ru/news/{slug}">{title}</a>
+            <a href="{proj_settings.url_prefix}{slug}">{title}</a>
         </div>
     </div>
 </div>

@@ -53,13 +53,13 @@
 <div class="materials-container">
 	<div class="materials-config-wr">
 		<div class="config-icons-container">
-			<div class="config-icon-wr" on:click={()=>view_id = 1}>
+			<div class="config-icon-wr mat-icon-first" on:click={()=>view_id = 1}>
 				<img alt="" src={proj_settings.grid_icon_url}>
 			</div>
-			<div class="config-icon-wr" on:click={()=>view_id = 2}>
+			<div class="config-icon-wr mat-icon-middle" on:click={()=>view_id = 2}>
 				<img alt="" src={proj_settings.points_icon_url}>
 			</div>
-			<div class="config-icon-wr" on:click={()=>view_id = 3}>
+			<div class="config-icon-wr mat-icon-last" on:click={()=>view_id = 3}>
 				<img alt="" src={proj_settings.lines_icon_url}>
 			</div>
 		</div>
@@ -96,7 +96,7 @@
 						<FullViewList
 								img_src={item_new.cover}
 								title={item_new.title}
-								body={item_new.body.slice(0,300)+"..."}
+								title_body={item_new.title_body}
 								pubdate={item_new.pubdate}
 								slug={item_new.slug}
 						/>
